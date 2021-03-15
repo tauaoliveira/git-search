@@ -1,0 +1,5 @@
+.mat-header-cell,
+.mat-cell {
+    justify-content: center;
+    min-width: fit-content;
+}

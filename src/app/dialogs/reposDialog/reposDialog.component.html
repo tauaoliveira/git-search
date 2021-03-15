@@ -1,0 +1,38 @@
+<mat-card style="margin-bottom: 10px; width: 100%;">
+  <mat-card-content>
+    <mat-table [dataSource]="dataSource" matSort style="width: 100%;">
+      <ng-container matColumnDef="nome">
+        <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
+        <mat-cell *matCellDef="let row;">{{row.name}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="url">
+        <mat-header-cell *matHeaderCellDef style="min-width: 40%;">Url</mat-header-cell>
+        <mat-cell *matCellDef="let row;" style="min-width: 40%;">
+          <a href="{{row.html_url}}">{{row.html_url}}</a>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="usuario">
+        <mat-header-cell *matHeaderCellDef>Usuário</mat-header-cell>
+        <mat-cell *matCellDef="let row;">{{row.owner.login}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="descricao">
+        <mat-header-cell *matHeaderCellDef>Descrição</mat-header-cell>
+        <mat-cell *matCellDef="let row;">
+          <i class="fa fa-info-circle fa-lg" aria-hidden="true" [title]="row.description">
+          </i>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: columns"></mat-row>
+
+    </mat-table>
+    <mat-paginator #paginator [length]="10" [pageSizeOptions]="[10]"></mat-paginator>
+  </mat-card-content>
+</mat-card>
+<div style="text-align: center;">
+  <button class="btn-branco" (click)="voltar()" mat-raised-button>Voltar</button>
+</div>

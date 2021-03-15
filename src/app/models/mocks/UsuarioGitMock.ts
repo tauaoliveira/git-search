@@ -1,0 +1,34 @@
+export class UsuarioGitMock {
+  login: 'tauaoliveira';
+  id: 31699755;
+  node_id: 'MDQ6VXNlcjMxNjk5NzU1';
+  avatar_url: 'https://avatars.githubusercontent.com/u/31699755?v=4';
+  gravatar_id: '';
+  url: 'https://api.github.com/users/tauaoliveira';
+  html_url: 'https://github.com/tauaoliveira';
+  followers_url: 'https://api.github.com/users/tauaoliveira/followers';
+  following_url: 'https://api.github.com/users/tauaoliveira/following{/other_user}';
+  gists_url: 'https://api.github.com/users/tauaoliveira/gists{/gist_id}';
+  starred_url: 'https://api.github.com/users/tauaoliveira/starred{/owner}{/repo}';
+  subscriptions_url: 'https://api.github.com/users/tauaoliveira/subscriptions';
+  organizations_url: 'https://api.github.com/users/tauaoliveira/orgs';
+  repos_url: 'https://api.github.com/users/tauaoliveira/repos';
+  events_url: 'https://api.github.com/users/tauaoliveira/events{/privacy}';
+  received_events_url: 'https://api.github.com/users/tauaoliveira/received_events';
+  type: 'User';
+  site_admin: false;
+  name: 'Tauã Oliveira';
+  company: null;
+  blog: '';
+  location: null;
+  email: null;
+  hireable: null;
+  bio: null;
+  twitter_username: null;
+  public_repos: 1;
+  public_gists: 0;
+  followers: 0;
+  following: 0;
+  created_at = new Date('2021-03-11T21:08:16Z');
+  updated_at = new Date('2021-03-11T21:08:16Z');
+}

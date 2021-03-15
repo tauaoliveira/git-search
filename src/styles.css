@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.no-enter {
+    white-space: nowrap;
+}
+
+.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4 {
+    color: #387a98;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald Bold', Verdana, Tahoma, sans-serif;
+}
+
+.card {
+    width: 100%;
+}
+
+.card-header {
+    padding: 5px;
+}
+
+.card-body {
+    padding: 5px;
+}
+
+.btn-padrao {
+    margin: 10px 5px !important;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    background: rgb(56, 122, 152);
+    border: #387a98;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.space-top {
+    margin-top: 70px;
+}
+
+.mat-step-header .mat-step-icon {
+    background: #387a98;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #6CA6CD !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #007390 !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

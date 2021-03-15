@@ -1,0 +1,44 @@
+<div class="titulo">Pesquisa usuário</div>
+
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" style="place-content: center;">
+        <div class="cardSmart" fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%">
+            <mat-card>
+                <mat-card-content>
+                    <form id="formPesquisa" [formGroup]="pesquisaUsuarioFormControl">
+                        <div class="col-md-12">
+                            <div style="text-align: center; ">
+                                <mat-form-field class="col-md-8">
+                                    <input name="nome" formControlName="userNameGit" type="text" maxlength="100"
+                                        matInput placeholder="Nome do usuário" [(ngModel)]="userNameGit" required>
+                                </mat-form-field>
+                            </div>
+                            <div style="text-align: center;padding: 10px;">
+                                <button class="bot-azul" (click)="buscarUsuarioGit()" type="submit" form="formPesquisa"
+                                    title="Pesquisar usuário no Git" mat-raised-button>Pesquisar</button>
+                            </div>
+                        </div>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="mat-elevation-z4" style="text-align: center; margin-top: 5px;" *ngIf="userGit">
+                <mat-card-header style="place-content: center;">
+                    <mat-card-title>{{userGit.login}}</mat-card-title>
+                </mat-card-header>
+
+                <img mat-card-image alt="Foto do perfil do usúario do Git" [src]="userGit.avatar_url" style="width: 150px; height: 150px;" />
+                <mat-card-content>
+                    <a [href]="userGit.html_url">
+                        {{userGit.html_url}}
+                    </a>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button color="primary" mat-raised-button title="Repositórios do usuário"
+                        (click)="abrirDialogRepositorios(userNameGit,false)">repos</button>
+                    <button color="primary" mat-raised-button title="Repositórios que o usuário favoritou"
+                        (click)="abrirDialogRepositorios(userNameGit,true)">starred</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
